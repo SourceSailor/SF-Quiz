@@ -3,7 +3,7 @@ Object of application: Create quiz game about San Francisco
 Description: The game will prompt you with 4 questions, with only one correct answer. There will be a count down indicator that will mark you incorrect if you do not answer in time. Once the user selects an answer the application will highlight if it is correct or wrong, and then provide the correct answer (if wrong). At the end of the game it will show you all of your answer and grade your score. 
 
 Objectives: 
-  - Create count down time (10 seconds)
+  - Create count down timer (10 seconds)
   - Highlight correct and wrong answers
   - Display the correct answer (if wrong)
   - Once a question is answered or the timer runs out, a new question is displayed
