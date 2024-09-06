@@ -1,14 +1,16 @@
 export const quizData = [
   {
+    id: 1,
     question: "What is the oldest building in SF",
     answers: [
-      { text: "Mission Dolores", isCorrect: true, id: 1 },
-      { text: "Fort Point", isCorrect: false, id: 2 },
+      { text: "Fort Point", isCorrect: false, id: 1 },
+      { text: "Mission Dolores", isCorrect: true, id: 2 },
       { text: "St. Mary’s Cathedral", isCorrect: false, id: 3 },
       { text: "Presidio Officers' Club", isCorrect: false, id: 4 },
     ],
   },
   {
+    id: 2,
     question:
       "What popular San Francisco neighborhood is famous for its Victorian Painted Ladies houses?",
     answers: [
@@ -19,6 +21,7 @@ export const quizData = [
     ],
   },
   {
+    id: 3,
     question:
       "Which San Francisco street is home to the oldest and longest continuously operating jazz club on the West Coast?",
     answers: [
@@ -29,6 +32,7 @@ export const quizData = [
     ],
   },
   {
+    id: 4,
     question:
       "Which San Francisco Street is the crookedest street in the world",
     answers: [
@@ -39,6 +43,7 @@ export const quizData = [
     ],
   },
   {
+    id: 5,
     question:
       "What is the affectionate nickname given to the fog that frequently blankets San Francisco?",
     answers: [

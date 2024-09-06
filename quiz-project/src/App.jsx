@@ -5,6 +5,7 @@ import QuizCard from "./components/QuizCard";
 import { quizData } from "./data";
 
 import "./App.css";
+import EndCard from "./components/EndCard";
 
 function App() {
   const [gameStart, setGameStart] = useState(false);
@@ -14,6 +15,7 @@ function App() {
 
   const quizQuestion = quizData[questionIndex].question;
   const quizAnswers = quizData[questionIndex].answers;
+  const lastQuestion = questionIndex === quizData.length - 1;
 
   function onStartGame() {
     setGameStart(true);
@@ -22,8 +24,10 @@ function App() {
   function updatePlayerData(data) {
     setPlayerData((prevData) => [
       ...prevData,
+
       {
-        id: data.id,
+        id: questionIndex + 1,
+        question: quizQuestion,
         text: data.text,
         isCorrect: data.isCorrect,
       },
@@ -38,8 +42,6 @@ function App() {
     }
   }, [questionIndex]);
 
-  const onAnswerQuestion = useCallback(() => {}, [playerData]);
-
   console.log("Player Data: ", playerData);
   return (
     <>
@@ -48,6 +50,8 @@ function App() {
 
       {gameStart && !gameOver && (
         <QuizCard
+          lastQuestion={lastQuestion}
+          quizData={quizData}
           updatePlayerData={updatePlayerData}
           onNextQuestion={onNextQuestion}
           questionIndex={questionIndex}
@@ -57,7 +61,7 @@ function App() {
         />
       )}
 
-      {gameOver && "GAME OVER"}
+      {gameOver && <EndCard playerData={playerData} />}
     </>
   );
 }
