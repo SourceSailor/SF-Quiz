@@ -1,3 +1,5 @@
+import QuestionTimer from "./QuestionTimer";
+
 const QuizCard = ({
   quizQuestion,
   quizAnswers,
@@ -14,6 +16,8 @@ const QuizCard = ({
 
   return (
     <div className="flex flex-col m-auto px-8 py-5 w-[70%] rounded-lg bg-purple-800 justify-center">
+      <QuestionTimer timeout={10000} onTimeout={() => {}} />
+
       <h4 className="mb-5 text-2xl">{quizQuestion}</h4>
 
       {/* Displaying the correct answer if incorrect */}
@@ -37,6 +41,7 @@ const QuizCard = ({
           }`}
           // Diable clicking once an answer has been selected
           disabled={currentPlayerAnswer !== undefined}
+          //
           // Updating the Player Data State
           onClick={() => updatePlayerData(answer, quizQuestion)}
         >
