@@ -6,7 +6,7 @@ const EndCard = ({ playerData, onResetGame }) => {
   const percentageScore = (correctAnswers.length / playerData.length) * 100;
 
   return (
-    <section className="flex flex-col m-auto px-8 py-5 w-[70%] rounded-lg bg-purple-800 justify-center gap-10">
+    <section className="flex flex-col m-auto px-8 py-5 w-full md:w-[70%] rounded-lg bg-purple-800 justify-center gap-10">
       <div className="flex flex-row items-center justify-center gap-5">
         <p className="text-2xl">
           Answered Correct: {correctAnswers.length}/{playerData.length}
