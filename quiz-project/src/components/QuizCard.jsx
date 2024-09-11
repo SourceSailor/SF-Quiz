@@ -13,8 +13,10 @@ const QuizCard = ({
   );
 
   return (
-    <div className="flex flex-col m-auto px-5 md:px-8 py-5  w-full md:w-[70%] rounded-lg bg-purple-800 justify-center">
-      <h4 className="mb-5 text-2xl">{quizQuestion}</h4>
+    <div className="flex flex-col m-auto px-10 md:px-8 py-5 w-full md:w-[70%] rounded-lg bg-purple-800 justify-center">
+      <h4 className="mb-5 text-lg md:text-2xl leading-6 md:leading-8">
+        {quizQuestion}
+      </h4>
 
       {/* Displaying the correct answer if incorrect */}
       {currentPlayerAnswer !== undefined &&
